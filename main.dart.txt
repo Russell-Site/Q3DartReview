@@ -1,0 +1,46 @@
+void main(){
+  double celsius = 25.0;
+  double fahrenheit = 100.0;
+  
+  print("<=== Temperature Converter ===>");
+  
+  double celsiusToFahrenheit(celsius){
+    return (celsius * 9/5) + 32;
+  }
+  
+  double fahrenheitToCelsius(fahrenheit){
+    return (fahrenheit - 32) * 5/9;
+  }
+  
+  double convertedtoF = celsiusToFahrenheit(celsius);
+  print("${celsius}°C = ${convertedtoF.toStringAsFixed(1)}℉");
+  
+  double convertedtoC = fahrenheitToCelsius(fahrenheit);
+  print("${fahrenheit}℉ = ${convertedtoC.toStringAsFixed(1)}°C");
+  
+  void describeWeather(celsius){
+      String description;
+      String activity;
+    
+      if(celsius < 0){
+        description = "Cool and chill";
+        activity = "Enjoy the weather";
+      } else if(celsius>=0 && celsius<15){
+        description = "Cool and pleasant";
+        activity = "Time for outdoor avtivities, Enjoy";
+      } else if(celsius>=15 && celsius<25){
+        description = "Warm and pleasant";
+        activity = "The weather is good";
+      } else if(celsius>=25 && celsius<35){
+        description = "Hot and sunny";
+        activity = "Limit outdoor activities";
+      } else{
+        description = "Extremely Hot";
+        activity = "Avoid outdoor activities durting peak hours";
+      }
+    
+      print("${celsius.toStringAsFixed(1)}°C: $description - $activity");
+  }
+  
+  describeWeather(celsius);
+}
