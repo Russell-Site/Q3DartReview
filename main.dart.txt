@@ -43,5 +43,6 @@ void main(){
   }
   
   describeWeather(celsius);
+  describeWeather(convertedtoC);	
 	// yehey
 }
